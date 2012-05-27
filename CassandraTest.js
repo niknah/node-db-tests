@@ -1,4 +1,14 @@
 
+/*
+
+use cassandra-cli to start a demo keyspace...
+
+create keyspace DEMO;
+use DEMO;
+create column family Users;
+
+*/
+
 var helenus = require('helenus'),
       pool = new helenus.ConnectionPool({
         hosts      : ['localhost:9160'],
