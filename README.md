@@ -6,7 +6,7 @@ Assorted nodejs database module tests - May/2012
 
 There're various benchmarks around but I couldn't find any for nodejs.  I wanted to test the nodejs module as well.
 
-The tests are simple create, get, remove 10000 times(30000 requests total). The database is empty so it doesn't test any indexing.  Tests are async so it waits for the request to complete before continuing, it doesn't test the maximum load that a server can handle but the response speed per request.  'sync' is runned before starting and the time includes running 'sync' at the end to save everything to disk.
+The tests are simple create, get, remove 10000 times(30000 requests total). The database is empty so it doesn't test any indexing.  Tests are synced so it waits for the request to complete before continuing, it doesn't test the maximum load that a server can handle but the response speed per request.  'sync' is runned before starting and the time includes running 'sync' at the end to save everything to disk.
 
 Here're the speeds tested using the same laptop...
 
