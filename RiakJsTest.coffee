@@ -1,6 +1,6 @@
 
-riak = require('riak-js').getClient({api:'protobuf'})
-#riak = require('riak-js').getClient()
+#riak = require('riak-js').getClient({api:'protobuf'})
+riak = require('riak-js').getClient()
 
 Next=(upto)->
 	key='foo'+upto

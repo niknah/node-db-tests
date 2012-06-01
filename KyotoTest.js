@@ -10,7 +10,7 @@ db.open('localhost', 1978);
 
 function Next(upto) {
 var key='foo'+upto;
-db.set(key,'barbarbar'+upto,function() {
+db.set(key,'bazbazbaz'+upto,function() {
 	db.get(key,{},function() {
 		db.remove(key,function() {
 			if(upto<10000) {

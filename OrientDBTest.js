@@ -34,6 +34,7 @@ var clusterId=db.clusters[0].id;
 
             assert(!err, "Error while reloading the database: " + err);
 
+var maxtimes=1000;
 
 function Next(upto) {
 //                var firstDocData = "TestClass@nick:\"ThePresident\",subdoc:(name:\"subdoc name\",id_field:42),follows:[],followers:[],name:\"Barack\",surname:\"Obama\",location:#3:2,invitedBy:,salary_cloned:,salary:120.3f";
@@ -68,9 +69,10 @@ function Next(upto) {
 
                                 db.deleteRecord(deleteRecord, function(err, result) {
 
-if(upto<10000) { 
+if(upto<maxtimes) { 
 	Next(upto+1);
 } else {
+console.log('done '+maxtimes);
                                     db.command("drop class TestClass", function(err, result) {
                                         db.close();
                                     });

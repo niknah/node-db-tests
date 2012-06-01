@@ -7,7 +7,7 @@ var client = new mongo.Db('test', new mongo.Server("127.0.0.1", 27017, {})),
 
 function Next(upto) {
 	var key='foo'+upto;
-      collection.insert({key:'barbarbar'+upto}, function(err, docs) {
+      collection.insert({key:'bazbazbaz'+upto}, function(err, docs) {
 
 
         collection.count(function(err, count) {
@@ -16,7 +16,7 @@ function Next(upto) {
 
         // Locate all the entries using find
         collection.find({'id':docs._id}).toArray(function(err, results) {
-          assert(1==results.length);
+          assert(1<=results.length);
           assert(results[0].a !="");
 
 collection.remove({'id':docs._id},function() {
