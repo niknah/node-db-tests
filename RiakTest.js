@@ -17,7 +17,7 @@ client.on("metrics", function (type, key, val) {
 // This mutator function does a simple increment of prop2 with no error checking
 var key="foo";
 function Next(upto) {
-	client.put('xxx',key, "bar", {},function (err) {
+	client.put('xxx',key, "bazbazbaz"+upto, {},function (err) {
 		client.get('xxx',key,{},function(err) {
 			client.del('xxx',key,function(err) {
 				if(upto>10000) {
