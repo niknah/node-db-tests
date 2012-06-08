@@ -6,9 +6,11 @@ Assorted nodejs database module tests - May/2012
 
 I've been shopping for a database to use.  There're various database benchmarks around but I couldn't find any for nodejs.  I wanted to test the nodejs module as well.
 
-The tests are simple create, get, remove 10000 times(30000 requests total). The database is empty.  Tests are synced so it waits for the request to complete before continuing.  It doesn't test the maximum load that a server can handle but the response speed per request.  In a simple database more queries are needed to grab the data than an sql database where everything is usually sent back in one query.  'sync' is executed before the start of the tests.
+The tests are simple create, get, remove 10000 times(30000 requests total). The database is empty.  Tests are synced so it waits for the request to complete before continuing.  'sync' is executed before the start of the tests.
 
-Here're the speeds tested using the same laptop...
+It tests the response speed per request.  In a simple database more queries are needed to grab the data than an sql database where everything is usually sent back in one query.
+
+Here're the speeds, tested using the same laptop...
 
 <table>
 <tr><td>Time</td><td>Database</td><td>NPM Module</td><td>Net</td></tr>
