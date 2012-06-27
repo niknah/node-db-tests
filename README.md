@@ -19,7 +19,7 @@ Here're the speeds, tested using the same laptop...
 <tr><td>0:01.7</td><td>Memcached v1.4.13</td><td>memcache</td><td>Y</td></tr>
 <tr><td>0:01.9</td><td>redis v2.4.14</td><td>redis</td><td>Y</td></tr>
 <tr><td>0:02.7</td><td>Memcached v1.4.13</td><td>memcached</td><td>Y</td></tr>
-<tr><td>0:03.4</td><td>MongoDB v2.0.5</td><td>mongodb</td><td>Y</td></tr>
+<tr><td>0:09.0</td><td>MongoDB v2.0.5</td><td>mongodb</td><td>Y</td></tr>
 <tr><td>0:11.7</td><td>Kyoto Tyrant v0.9.55 .kct (similar results for .kch)</td><td>kyoto-client</td><td>Y</td></tr>
 <tr><td>0:30.0</td><td>Cassandra v1.1.0</td><td>helenus</td><td>Y</td></tr>
 <tr><td>0:56.0</td><td>Riak v1.1.2 with protobuf</td><td>riak-js</td><td>Y</td></tr>

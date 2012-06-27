@@ -7,7 +7,7 @@ var client = new mongo.Db('test', new mongo.Server("127.0.0.1", 27017, {})),
 
 function Next(upto) {
 	var key='foo'+upto;
-      collection.insert({key:'bazbazbaz'+upto}, function(err, docs) {
+      collection.insert({key:'bazbazbaz'+upto}, {safe:true},function(err, docs) {
 
 
         collection.count(function(err, count) {
@@ -19,7 +19,7 @@ function Next(upto) {
           assert(1<=results.length);
           assert(results[0].a !="");
 
-collection.remove({'id':docs._id},function() {
+collection.remove({'id':docs._id},{safe:true},function() {
           // Let's close the db
 if(upto<10000) {
 	Next(upto+1);
